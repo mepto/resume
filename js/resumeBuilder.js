@@ -42,7 +42,6 @@ var bio = {
   }
 };
 
-
 /* work information */
 
 var work = {
@@ -86,7 +85,6 @@ var work = {
     }
   }
 };
-
 
 /* education information */
 
@@ -142,7 +140,6 @@ var education = {
     var formatEducation = formatSchools + formatOnlineCourses;
   }
 };
-
 
 /* projects information */
 
