@@ -12,10 +12,10 @@ var bio = {
     "location": "Schiltigheim"
   },
   "skills": ["Bilingual", "details-oriented", "solid writing skills", "Good bridge between business and users"],
-  "bioPic": "http://placekitten.com/350/350",
+  "biopic": "http://placekitten.com/350/350",
   "display": function () {
 
-    var formattedBio = HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role) + HTMLcontactStart + HTMLbioPic.replace('%data%', bio.bioPic) + HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+    var formattedBio = HTMLheaderName.replace("%data%", bio.name) + HTMLheaderRole.replace("%data%", bio.role) + HTMLcontactStart + HTMLbioPic.replace('%data%', bio.biopic) + HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
     /* biography addition on page */
     $("#header").prepend(formattedBio);
 
@@ -26,8 +26,7 @@ var bio = {
         currentContact[contact] = HTMLcontactGeneric.replace('%contact%', contact).replace('%data%', bio.contacts[contact]);
         formattedContacts.push(currentContact[contact]);
       }
-      $('#topContacts').append(formattedContacts.join(''));
-      $('#footerContacts').append(formattedContacts.join(''));
+      $('#topContacts,  #footerContacts').append(formattedContacts.join(''));
     }
 
     /* check if skills are available */
@@ -95,7 +94,7 @@ var education = {
       "location": "Rue de Verdun, Strasbourg",
       "degree": "BTS",
       "majors": ["Secretarial duties"],
-      "dates": 2001,
+      "date": "2001",
       "url": "http://www.clotilde.org"
     },
     {
@@ -103,7 +102,7 @@ var education = {
       "location": "Rue des Greniers, Strasbourg",
       "degree": "Baccalauréat",
       "majors": ["Litterature", "English"],
-      "dates": 1997,
+      "date": "1997",
       "url": "http://www.lucieberger.com"
     }
   ],
@@ -111,13 +110,13 @@ var education = {
     {
       "title": "Front-End developer nanodegree",
       "school": "Udacity",
-      "dates": 2016,
+      "date": "2016",
       "url": "http://udacity.com"
     },
     {
       "title": "Licence universitaire LPATC",
       "school": "Université de Strasbourg",
-      "dates": 2013,
+      "date": "2013",
       "url": "http://lpatc.eformation-webmaster.net/page/accueil-1"
     }
   ],
